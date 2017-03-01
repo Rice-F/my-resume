@@ -55,7 +55,9 @@ ul { list-style: none;}
 
 /* Header */
 header {
-    positon: relative;
+    background-image: url("../images/hero-4.jpg");
+    background-position: 0px 0px;
+    position: relative;
     z-index: 1;
     background-attachment: fixed;   /*决定背景background-image是在视口中固定还是随包含块滚动*/
     height: 700px;
@@ -70,7 +72,7 @@ header>.overlay-bgColor {
     left: 0;
     width: 100%;
     z-index: 2;
-    background: rgba(255, 215, 119, .9);
+    background: rgba(255, 215, 119, .8);
 }
 header,
 .wrap-intro { height: 700px;}
@@ -120,3 +122,120 @@ header,
 }
 
 /* About me */
+#aboutMe p {
+    margin-bottom: 1.5em;
+    color: #88929a;
+}
+
+/* projects */
+#projects .section-title+p { color: #88929a;}
+div.project a {
+    margin-bottom: 1.5em;
+    display: block;
+    position: relative;
+}
+#projects .overlay-bgColor {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(255, 215, 119, .8);
+    z-index: 8;
+    opacity: 0;
+}
+#projects .overlay-title {
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    width: 100%;
+    margin-top: -15px;
+    z-index: 9;
+    /*color: #fff;*/
+    font-size: 20px;
+    /*opacity: 0;*/
+}
+#projects .overlay-text {
+    position: absolute;
+    top: 60%;
+    text-align: center;
+    width: 100%;
+    margin-top: -15px;
+    z-index: 9;
+    /*color: #fff;*/
+    font-size: 16px;
+    /*opacity: 0;*/
+}
+@media screen and (max-width: 480px) {
+    .col-xxs-12 {
+        float: none;
+        display: block;
+        clear: both;
+        width: 100%;
+    }
+}
+.pro-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* motto */
+#motto {
+    background-image: url("../images/hero-3.jpg");
+    background-color: transparent;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding: 2em 0;
+}
+@media screen and (max-width: 992px) {
+    #motto {
+        padding: 7em 0 !important;
+    }
+}
+#motto .overlay-bgColor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0 ,0, .4);
+}
+#motto,
+#motto .content-wrap {
+    height: 500px;
+    width: 100%;
+}
+@media screen and (max-width: 992px) {
+    #motto,
+    #motto .content-wrap {
+        height: inherit;
+    }
+}
+#motto .content-wrap {
+    display: table;
+}
+#motto .content-wrap .content {
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+#motto blockquote {
+    border-left: none;
+    padding-left: none;
+}
+#motto blockquote > p {
+    font-size: 30px;
+    line-height: 41px;
+    color: #fff;
+    font-family: "Sanchez", times, serif;
+}
+#motto blockquote > p .author {
+    font-size: 18px;
+    font-family: "Montserrat", arial, sans-serif;
+    font-style: normal;
+    display: block;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+}
