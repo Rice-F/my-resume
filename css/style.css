@@ -25,7 +25,9 @@ a:focus {
     text-decoration: none;
     color: #fcb322;
 }
-ul { list-style: none;}
+ul {
+    list-style: none;
+}
 
 /* public */
 .section-title {
@@ -44,11 +46,49 @@ ul { list-style: none;}
     position: absolute;
     background: #ffd777;
 }
-.row-padded { padding: 7em 0;}
-.text-center { text-align: center;}
+.row-padded {
+    padding: 7em 0;
+}
+.text-center {
+    text-align: center;
+}
 
 /* Navigation */
-.navbar-fixed-top ~ header { padding-top: 50px; }
+@media screen and (min-width: 768px) {
+    .navbar-custom {
+        padding: 20px 0;
+        border-bottom: none;
+        background: transparent;
+        letter-spacing: 1px;
+    }
+}
+.navbar-header a {
+    font-size: 36px;
+    font-weight: 600;
+}
+.navbar-collapse a {
+    font-size: 20px;
+    font-weight: 400;
+}
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+.navbar-default .navbar-brand:hover {
+    color: #333;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: #88929a;
+}
+@media screen and (max-width: 768px) {
+    .navbar-default .navbar-brand {
+        color: #333;
+    }
+    .navbar-default .navbar-nav>li>a {
+        color: #88929a;
+    }
+}
+
 
 /* Header */
 header {
@@ -124,6 +164,53 @@ header,
     color: #88929a;
 }
 
+/* skills */
+#skills {
+    background-image: url("../images/hero-4.jpg");
+    background-color: transparent;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding: 2em 0;
+}
+@media screen and (max-width: 992px) {
+    .progress-padded {
+        padding: 7em 0;
+    }
+}
+#skills .overlay-bgColor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0 , 0, .4);
+}
+#skills .section-title {
+    color: #fff;
+}
+.progress-title {
+    font-size: 16px;
+    letter-spacing: 0.7px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 10px 0 10px;
+}
+.progress-bar {
+    height: 20px;
+}
+.progress{
+    /*height: 5px;*/
+    /*background: #d6d6d6;*/
+    /*border-radius: 0;*/
+    /*box-shadow: none;*/
+    /*margin-bottom: 40px;*/
+    /*overflow: visible;*/
+    position: relative;
+    background: transparent;
+}
+
+
 /* projects */
 #projects .section-title+p { color: #88929a;}
 div.project a {
@@ -178,58 +265,58 @@ div.project a {
 }
 
 /* motto */
-#motto {
-    background-image: url("../images/hero-3.jpg");
-    background-color: transparent;
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    padding: 2em 0;
-}
-@media screen and (max-width: 992px) {
-    #motto { padding: 7em 0; }
-}
-#motto .overlay-bgColor {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0 ,0, .4);
-}
-#motto,
-#motto .content-wrap {
-    height: 500px;
-    width: 100%;
-}
-@media screen and (max-width: 992px) {
-    #motto,
-    #motto .content-wrap { height: inherit; }
-}
-#motto .content-wrap { display: table; }
-#motto .content-wrap .content {
-    width: 100%;
-    display: table-cell;
-    vertical-align: middle;
-}
-#motto blockquote {
-    border-left: none;
-    padding-left: none;
-}
-#motto blockquote > p {
-    font-size: 30px;
-    line-height: 41px;
-    color: #fff;
-    font-family: "Sanchez", times, serif;
-}
-#motto blockquote > p .author {
-    font-size: 18px;
-    font-family: "Montserrat", arial, sans-serif;
-    font-style: normal;
-    display: block;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.5);
-}
+/*#motto {*/
+    /*background-image: url("../images/hero-3.jpg");*/
+    /*background-color: transparent;*/
+    /*background-size: cover;*/
+    /*background-attachment: fixed;*/
+    /*position: relative;*/
+    /*padding: 2em 0;*/
+/*}*/
+/*@media screen and (max-width: 992px) {*/
+    /*#motto { padding: 7em 0; }*/
+/*}*/
+/*#motto .overlay-bgColor {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*background: rgba(0, 0 ,0, .4);*/
+/*}*/
+/*#motto,*/
+/*#motto .content-wrap {*/
+    /*height: 500px;*/
+    /*width: 100%;*/
+/*}*/
+/*@media screen and (max-width: 992px) {*/
+    /*#motto,*/
+    /*#motto .content-wrap { height: inherit; }*/
+/*}*/
+/*#motto .content-wrap { display: table; }*/
+/*#motto .content-wrap .content {*/
+    /*width: 100%;*/
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+/*}*/
+/*#motto blockquote {*/
+    /*border-left: none;*/
+    /*padding-left: none;*/
+/*}*/
+/*#motto blockquote > p {*/
+    /*font-size: 30px;*/
+    /*line-height: 41px;*/
+    /*color: #fff;*/
+    /*font-family: "Sanchez", times, serif;*/
+/*}*/
+/*#motto blockquote > p .author {*/
+    /*font-size: 18px;*/
+    /*font-family: "Montserrat", arial, sans-serif;*/
+    /*font-style: normal;*/
+    /*display: block;*/
+    /*font-weight: 400;*/
+    /*color: rgba(255, 255, 255, 0.5);*/
+/*}*/
 
 /* contact */
 #contact {
@@ -240,9 +327,10 @@ div.project a {
     position: relative;
     padding: 2em 0;
 }
-.contact-padded { padding: 2em 0;}
 @media screen and (max-width: 992px) {
-    .contact-padded { padding: 7em 0;}
+    .contact-padded {
+        padding: 7em 0;
+    }
 }
 #contact .overlay-bgColor {
     position: absolute;
@@ -259,9 +347,13 @@ div.project a {
 }
 @media screen and (max-width: 992px) {
     #contact,
-    #contact .content-wrap { height: inherit; }
+    #contact .content-wrap {
+        height: inherit;
+    }
 }
-#contact .content-wrap { display: table; }
+#contact .content-wrap {
+    display: table;
+}
 #contact .content-wrap .content {
     width: 100%;
     display: table-cell;
@@ -287,30 +379,28 @@ div.project a {
 .form-control {
     color: #fff;
     border: none !important;
-    border-radius: 4px;
     background: rgba(255, 255, 255, 0.1);
-    box-shadow: none;
     display: block;
     width: 100%;
     height: 50px;
     padding: 14px 12px;
     font-size: 14px;
 }
-.form-control:active,        /*还有问题！！！*/
+.form-control:active,
 .form-control:focus {
     background: #fff;
-    outline: none;
-    box-shadow: none;
+    color: #333;
 }
 #message {
     height: 130px;
 }
-input[type="submit"]:hover {
-    background-color: #fcb322;
-    border-color: #fcb322;
+input[type="submit"].btn:hover {
+    background-color: #ffd777;
+    border-color: #ffd777;
 }
 input[type="submit"].btn {
-    font-size: 16px;
+    font-size: 18px;
+    height: 49px;
 }
 input[type="submit"].btn-primary {
     color: #fff;
