@@ -8,7 +8,6 @@ html {
     -webkit-text-size-adjust: 100%;
     color: #777;
     width: 100%;
-    height: 100%;
 }
 h1 {
     font-size: 72px;
@@ -35,23 +34,21 @@ ul { list-style: none;}
     font-weight: 400;
     margin-top: 0;
     margin-bottom: 1.5em;
+    padding-bottom: 10px;
 }
 .section-title>span {
     display: block;
     width: 100%;
     bottom: 0;
     height: 3px;
-    positon: absolute;
-    margin-top: 10px;
+    position: absolute;
     background: #ffd777;
 }
 .row-padded { padding: 7em 0;}
 .text-center { text-align: center;}
 
 /* Navigation */
-.navbar-fixed-top ~ header {
-    padding-top: 50px;
-}
+.navbar-fixed-top ~ header { padding-top: 50px; }
 
 /* Header */
 header {
@@ -190,9 +187,7 @@ div.project a {
     padding: 2em 0;
 }
 @media screen and (max-width: 992px) {
-    #motto {
-        padding: 7em 0 !important;
-    }
+    #motto { padding: 7em 0; }
 }
 #motto .overlay-bgColor {
     position: absolute;
@@ -209,13 +204,9 @@ div.project a {
 }
 @media screen and (max-width: 992px) {
     #motto,
-    #motto .content-wrap {
-        height: inherit;
-    }
+    #motto .content-wrap { height: inherit; }
 }
-#motto .content-wrap {
-    display: table;
-}
+#motto .content-wrap { display: table; }
 #motto .content-wrap .content {
     width: 100%;
     display: table-cell;
@@ -238,4 +229,91 @@ div.project a {
     display: block;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.5);
+}
+
+/* contact */
+#contact {
+    background-image: url("../images/hero-4.jpg");
+    background-color: transparent;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding: 2em 0;
+}
+.contact-padded { padding: 2em 0;}
+@media screen and (max-width: 992px) {
+    .contact-padded { padding: 7em 0;}
+}
+#contact .overlay-bgColor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0 ,0, .4);
+}
+#contact,
+#contact .content-wrap {
+    height: 500px;
+    width: 100%;
+}
+@media screen and (max-width: 992px) {
+    #contact,
+    #contact .content-wrap { height: inherit; }
+}
+#contact .content-wrap { display: table; }
+#contact .content-wrap .content {
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+#contact .section-title {
+    color: #fff;
+}
+.contact {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0;
+    margin: 0 0 1.5em 0;
+}
+.contact li {
+    position: relative;
+    padding: 0;
+    margin: 0 0 .5em 0;
+    padding-left: 30px;
+}
+.form-group {
+    margin-bottom: 30px;
+}
+.form-control {
+    color: #fff;
+    border: none !important;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 14px 12px;
+    font-size: 14px;
+}
+.form-control:active,        /*还有问题！！！*/
+.form-control:focus {
+    background: #fff;
+    outline: none;
+    box-shadow: none;
+}
+#message {
+    height: 130px;
+}
+input[type="submit"]:hover {
+    background-color: #fcb322;
+    border-color: #fcb322;
+}
+input[type="submit"].btn {
+    font-size: 16px;
+}
+input[type="submit"].btn-primary {
+    color: #fff;
+    background-color: rgba(255, 215, 119, .8);
+    border-color: rgba(255, 215, 119, .8);
 }
