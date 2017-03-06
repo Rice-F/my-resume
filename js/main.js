@@ -1,4 +1,4 @@
-//导航条缩小
+//导航条固定
 $(window).scroll(function(){
     if( $(".navbar").offset().top > 150 ){
         $(".navbar").addClass("navbar-shrink");
@@ -6,3 +6,4 @@ $(window).scroll(function(){
         $(".navbar").removeClass("navbar-shrink");
     }
 })
+

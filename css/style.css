@@ -83,10 +83,10 @@ ul {
     color: #fff;
 }
 .navbar-default .navbar-brand:hover {
-    color: #ffd777;
+    color: #333;
 }
 .navbar-default .navbar-nav>li>a:hover {
-    color: #ffd777;
+    color: #333;
 }
 @media screen and (max-width: 768px) {
     .navbar-default .navbar-brand {
