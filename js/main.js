@@ -7,3 +7,8 @@ $(window).scroll(function(){
     }
 })
 
+//导航条对应
+$(function(){
+    $("ul.nav").onePageNav();
+});
+

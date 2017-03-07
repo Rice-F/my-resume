@@ -52,6 +52,10 @@ ul {
 .text-center {
     text-align: center;
 }
+.current >a{
+    background-color: #fed136;
+    border-radius: 3px;
+}
 
 /* Navigation */
 @media screen and (min-width: 768px) {
@@ -141,6 +145,9 @@ header {
     position: relative;
 }
 @media screen and (max-width: 768px) {          /* 媒体查询圆形动画部分 */
+    .intro-link {
+        margin-bottom: 10px;
+    }
     .cycle-link {
         width: 100%;
         margin: 0 auto;
@@ -149,6 +156,7 @@ header {
     .cycle-link>a {
         display: none;
     }
+
 }
 .cycle-link .link-github,
 .cycle-link .link-zhihu,
@@ -282,6 +290,53 @@ header {
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-direction: normal;
 }
+@keyframes clockwise{
+    from {
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+/*@-webkit-keyframes clockwise{*/
+    /*from {*/
+        /*-webkit-transform:rotate(0deg);*/
+    /*}*/
+    /*to {*/
+        /*-webkit-transform:rotate(360deg);*/
+    /*}*/
+/*}*/
+
+@keyframes anticlockwise{
+    from {
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform:rotate(-360deg);
+        -moz-transform:rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+    }
+}
+
+/*@-webkit-keyframes anticlockwise{*/
+    /*from {*/
+        /*-webkit-transform:rotate(0deg);*/
+    /*}*/
+    /*to {*/
+        /*-webkit-transform:rotate(-360deg);*/
+    /*}*/
+/*}*/
 .head_img_div{
     position: relative;
     z-index: 2;
