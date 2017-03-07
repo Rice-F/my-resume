@@ -107,15 +107,20 @@ header {
     position: relative;
     z-index: 1;
     background-attachment: fixed;   /*决定背景background-image是在视口中固定还是随包含块滚动*/
-    height: 700px;
     color: #fff;
     text-align: center;
 }
-header,
-.wrap-intro { height: 700px;}
 .wrap-intro {
     display: table;
     width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+@media (min-width: 768px) {
+    .wrap-intro {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
 }
 .wrap-intro .intro {
     position: relative;
@@ -124,6 +129,9 @@ header,
     display: table-cell;
     vertical-align: middle;
     color: #fff;
+}
+.intro-link {
+    margin-bottom: 50px;
 }
 .cycle-link {                                              /* 圆形动画部分 */
     background: url("../images/icon/cycle.svg");
@@ -138,12 +146,14 @@ header,
         margin: 0 auto;
         background: none;
     }
+    .cycle-link>a {
+        display: none;
+    }
 }
 .cycle-link .link-github,
 .cycle-link .link-zhihu,
 .cycle-link .link-jianshu {
     position: absolute;
-    display: block;
     border-radius: 25px;
     width: 120px;
     height: 50px;
@@ -215,13 +225,14 @@ header,
     width: 240px;
     height: 240px;
     margin: 10px;
+    position: relative;
 }
 
 .blue_cycle{
     width: 220px;
     height: 220px;
     text-align: center;
-    margin: 10px auto 10px auto;
+    margin: 10px auto;
 }
 .green_cycle_img,.yellow_cycle_img,.blue_cycle_img{
     position: absolute;
@@ -242,6 +253,7 @@ header,
 }
 
 .yellow_cycle_img{
+    margin-left: -50%;
     animation-name: anticlockwise;
     animation-duration:1s;
     animation-timing-function: linear;
@@ -310,7 +322,6 @@ header,
     font-weight: 300;
     color: #fff;
     line-height: 51px;
-    margin: 0 0 2.5em 0;
 }
 @media screen and (max-width: 768px) {
     .wrap-intro .intro .intro-sub {
@@ -318,12 +329,6 @@ header,
         line-height: 41px;
     }
 }
-/*.wrap-intro .intro .intro-link a {*/
-    /*font-size: 45px;*/
-    /*display: inline-block;*/
-    /*text-decoration: none;*/
-    /*border-bottom: none;*/
-/*}*/
 
 /* About me */
 #aboutMe p {
@@ -367,12 +372,6 @@ header,
     height: 20px;
 }
 .progress{
-    /*height: 5px;*/
-    /*background: #d6d6d6;*/
-    /*border-radius: 0;*/
-    /*box-shadow: none;*/
-    /*margin-bottom: 40px;*/
-    /*overflow: visible;*/
     position: relative;
     background: transparent;
     box-shadow: none;
@@ -431,60 +430,6 @@ div.project a {
     max-width: 100%;
     height: auto;
 }
-
-/* motto */
-/*#motto {*/
-    /*background-image: url("../images/hero-3.jpg");*/
-    /*background-color: transparent;*/
-    /*background-size: cover;*/
-    /*background-attachment: fixed;*/
-    /*position: relative;*/
-    /*padding: 2em 0;*/
-/*}*/
-/*@media screen and (max-width: 992px) {*/
-    /*#motto { padding: 7em 0; }*/
-/*}*/
-/*#motto .overlay-bgColor {*/
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*right: 0;*/
-    /*bottom: 0;*/
-    /*left: 0;*/
-    /*background: rgba(0, 0 ,0, .4);*/
-/*}*/
-/*#motto,*/
-/*#motto .content-wrap {*/
-    /*height: 500px;*/
-    /*width: 100%;*/
-/*}*/
-/*@media screen and (max-width: 992px) {*/
-    /*#motto,*/
-    /*#motto .content-wrap { height: inherit; }*/
-/*}*/
-/*#motto .content-wrap { display: table; }*/
-/*#motto .content-wrap .content {*/
-    /*width: 100%;*/
-    /*display: table-cell;*/
-    /*vertical-align: middle;*/
-/*}*/
-/*#motto blockquote {*/
-    /*border-left: none;*/
-    /*padding-left: none;*/
-/*}*/
-/*#motto blockquote > p {*/
-    /*font-size: 30px;*/
-    /*line-height: 41px;*/
-    /*color: #fff;*/
-    /*font-family: "Sanchez", times, serif;*/
-/*}*/
-/*#motto blockquote > p .author {*/
-    /*font-size: 18px;*/
-    /*font-family: "Montserrat", arial, sans-serif;*/
-    /*font-style: normal;*/
-    /*display: block;*/
-    /*font-weight: 400;*/
-    /*color: rgba(255, 255, 255, 0.5);*/
-/*}*/
 
 /* contact */
 #contact {
