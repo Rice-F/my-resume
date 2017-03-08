@@ -94,6 +94,10 @@ ul {
 .navbar-default .navbar-nav>li>a:hover {
     color: #fed136;
 }
+.navbar-default .navbar-nav>li>a:focus {
+    color: #fff;
+    background-color: #fed136;
+}
 @media screen and (max-width: 768px) {
     .navbar-default .navbar-brand {
         color: #333;
