@@ -24,6 +24,7 @@ a:hover,
 a:focus {
     text-decoration: none;
     color: #fcb322;
+    outline: none;
 }
 ul {
     list-style: none;
@@ -88,11 +89,13 @@ ul {
 .navbar-default .navbar-nav>li>a {
     color: #fff;
 }
-.navbar-default .navbar-brand:hover {
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
     color: #fed136;
 }
-.navbar-default .navbar-nav>li>a:hover {
-    color: #fed136;
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+     color: #fed136;
 }
 .navbar-default .navbar-nav>li.active>a,
 .navbar-default .navbar-nav>li.active>a:hover,
@@ -435,6 +438,14 @@ header {
 }
 .progress-bar {
     height: 20px;
+    -webkit-animation: animate-positive 2s;
+    animation: animate-positive 2s;
+}
+@-webkit-keyframes animate-positive {
+    0% { width: 0%;}
+}
+@keyframes animate-positive {
+    0% { width: 0%;}
 }
 .progress{
     position: relative;
