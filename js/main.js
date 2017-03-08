@@ -5,10 +5,33 @@ $(window).scroll(function(){
     }else{
         $(".navbar").removeClass("navbar-shrink");
     }
-})
-
-//导航条对应
-$(function(){
-    $("ul.nav").onePageNav();
 });
 
+//滚动监听使导航条高亮
+$('body').scrollspy({ target: '#navbar-responsive-collapse' });
+
+//点击导航项滚动效果
+$(function() {
+    $("a.page-scroll").bind('click', function(event) {
+        var $anchor = $(this);
+        $("html, body").stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+});
+
+//project-hover
+$('div.project a').mouseenter(function(){
+    $(this).find('.overlay-bgColor').stop().animate({
+        opacity: .8
+    }, 400 );
+    $(this).find('p').stop().animate({
+        opacity: 1
+    }, 400 );
+
+}).mouseleave(function(){
+    $(this).find('.overlay-bgColor, p').stop().animate({
+        opacity: 0
+    }, 400 );
+});

@@ -94,9 +94,12 @@ ul {
 .navbar-default .navbar-nav>li>a:hover {
     color: #fed136;
 }
-.navbar-default .navbar-nav>li>a:focus {
+.navbar-default .navbar-nav>li.active>a,
+.navbar-default .navbar-nav>li.active>a:hover,
+.navbar-default .navbar-nav>li.active>a:focus {
     color: #fff;
     background-color: #fed136;
+    border-radius: 3px;
 }
 @media screen and (max-width: 768px) {
     .navbar-default .navbar-brand {
@@ -390,6 +393,9 @@ header {
 }
 
 /* About me */
+#aboutMe {
+    position: relative;
+}
 #aboutMe p {
     margin-bottom: 1.5em;
     color: #88929a;
@@ -438,12 +444,21 @@ header {
 
 
 /* projects */
-#projects .section-title+p { color: #88929a;}
+#projects {
+    position: relative;
+}
+#projects .section-title+p {
+    color: #88929a;
+}
 div.project a {
     margin-bottom: 1.5em;
     display: block;
     position: relative;
 }
+/*.visible {*/
+    /*opacity: 1!important;*/
+    /*color: #fff;*/
+/*}*/
 #projects .overlay-bgColor {
     position: absolute;
     left: 0;
@@ -461,9 +476,9 @@ div.project a {
     width: 100%;
     margin-top: -15px;
     z-index: 9;
-    /*color: #fff;*/
+    color: #fff;
     font-size: 20px;
-    /*opacity: 0;*/
+    opacity: 0;
 }
 #projects .overlay-text {
     position: absolute;
@@ -472,9 +487,9 @@ div.project a {
     width: 100%;
     margin-top: -15px;
     z-index: 9;
-    /*color: #fff;*/
+    color: #fff;
     font-size: 16px;
-    /*opacity: 0;*/
+    opacity: 0;
 }
 @media screen and (max-width: 480px) {
     .col-xxs-12 {
