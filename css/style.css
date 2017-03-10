@@ -93,9 +93,11 @@ ul {
 .navbar-default .navbar-brand:focus {
     color: #fed136;
 }
-.navbar-default .navbar-nav>li>a:hover,
-.navbar-default .navbar-nav>li>a:focus {
+.navbar-default .navbar-nav>li>a:hover {
      color: #fed136;
+}
+.navbar-default .navbar-nav>li>a:focus {
+    color: #fff;
 }
 .navbar-default .navbar-nav>li.active>a,
 .navbar-default .navbar-nav>li.active>a:hover,
