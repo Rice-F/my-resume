@@ -109,17 +109,6 @@
         }
     }
 
-    var projectsWayPoint = function() {
-        if ($('#projects').length > 0 ) {
-            $('#projects').waypoint( function( direction ) {
-                if( direction === 'down' && !$(this).hasClass('animated') ) {
-                    setTimeout( animateProjects , 10);
-                    $(this).addClass('animated');
-                }
-            } , { offset: '90%' } );
-        }
-    };
-
     //Animate contact
     var animateContact = function(){
         if( $("#contact").length > 0 ){
@@ -132,17 +121,37 @@
         }
     }
 
-    parallax();
-    navbarFixed();
-    initNavbarTop();
-    scrollSpy();
-    projectHover();
-    pageScroll();
-    animateHeader();
-    animateAboutMe();
-    animateSkills();
-    projectsWayPoint();
-    animateContact();
+    //WayPoints
+    var headerWayPoint = function(){
+
+    };
+
+    var projectsWayPoint = function() {
+        if ($('#projects').length > 0 ) {
+            $('#projects').waypoint( function( direction ) {
+                if( direction === 'down' && !$(this).hasClass('animated') ) {
+                    setTimeout( animateProjects , 200);
+                    $(this).addClass('animated');
+                }
+            } , { offset: '90%' } );
+        }
+    };
+
+    $(function(){
+        parallax();
+        navbarFixed();
+        initNavbarTop();
+        scrollSpy();
+        projectHover();
+        pageScroll();
+        animateHeader();
+        animateAboutMe();
+        animateSkills();
+        projectsWayPoint();
+        animateContact();
+    })
+
+
 
     var x_arr = new Array();
     var y_arr = new Array();
