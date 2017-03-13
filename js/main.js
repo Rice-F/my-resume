@@ -123,7 +123,36 @@
 
     //WayPoints
     var headerWayPoint = function(){
+        if ($('#knowMe').length > 0 ) {
+            $('#knowMe').waypoint( function( direction ) {
+                if( direction === 'down' && !$(this).hasClass('animated') ) {
+                    setTimeout( animateHeader , 200);
+                    $(this).addClass('animated');
+                }
+            } , { offset: '90%' } );
+        }
+    };
 
+    var aboutMeWayPoint = function(){
+        if ($('#aboutMe').length > 0 ) {
+            $('#aboutMe').waypoint( function( direction ) {
+                if( direction === 'down' && !$(this).hasClass('animated') ) {
+                    setTimeout( animateAboutMe , 200);
+                    $(this).addClass('animated');
+                }
+            } , { offset: '90%' } );
+        }
+    };
+
+    var skillsWayPoint = function(){
+        if ($('#skills').length > 0 ) {
+            $('#skills').waypoint( function( direction ) {
+                if( direction === 'down' && !$(this).hasClass('animated') ) {
+                    setTimeout( animateSkills , 200);
+                    $(this).addClass('animated');
+                }
+            } , { offset: '90%' } );
+        }
     };
 
     var projectsWayPoint = function() {
@@ -137,6 +166,17 @@
         }
     };
 
+    var contactWayPoint = function() {
+        if ($('#contact').length > 0 ) {
+            $('#contact').waypoint( function( direction ) {
+                if( direction === 'down' && !$(this).hasClass('animated') ) {
+                    setTimeout( animateContact , 200);
+                    $(this).addClass('animated');
+                }
+            } , { offset: '90%' } );
+        }
+    };
+
     $(function(){
         parallax();
         navbarFixed();
@@ -144,11 +184,12 @@
         scrollSpy();
         projectHover();
         pageScroll();
-        animateHeader();
-        animateAboutMe();
-        animateSkills();
+
+        headerWayPoint();
         projectsWayPoint();
-        animateContact();
+        aboutMeWayPoint();
+        skillsWayPoint();
+        contactWayPoint();
     })
 
 
@@ -171,9 +212,7 @@
         y_arr[i] = parseInt(y) - 25;
     }
 
-    /*
-     *原型轨迹
-     */
+    /* 圆形轨迹 */
     var gitMove = document.getElementById('link-github');
     var zhihuMove = document.getElementById('link-zhihu')
     var blogMove = document.getElementById('link-jianshu')

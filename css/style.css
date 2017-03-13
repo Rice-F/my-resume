@@ -456,6 +456,7 @@ header {
     position: relative;
     background: transparent;
     box-shadow: none;
+    border-radius: 0;
 }
 
 
