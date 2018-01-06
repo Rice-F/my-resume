@@ -74,11 +74,11 @@ ul {
     }
     .navbar-shrink {
         padding: 10px 0;
-        background: #222;
+        background: #13131B;
     }
 }
 .navbar-default {
-    background-color: #222;
+    /*background-color: #13131B;*/
     border-color: transparent;
 }
 
@@ -133,8 +133,8 @@ ul {
 
 /* Header */
 header {
-    background-image: url("../images/header-bg.jpg");
-    background-position: center center;
+    background-image: url("../images/header-bg-1.jpg");
+    background-position: center top;
     position: relative;
     z-index: 1;
     background-attachment: fixed;   /*决定背景background-image是在视口中固定还是随包含块滚动*/
@@ -422,7 +422,7 @@ header {
 
 /* skills */
 #skills {
-    background-image: url("../images/hero-4.jpg");
+    background-image: url("../images/skills-bg.jpg");
     background-color: transparent;
     background-size: cover;
     background-attachment: fixed;
@@ -440,7 +440,7 @@ header {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0 , 0, .4);
+    background: rgba(0, 0 , 0, .2);
 }
 #skills .section-title {
     color: #fff;
@@ -534,12 +534,19 @@ div.project a {
 
 /* contact */
 #contact {
-    background-image: url("../images/map-image.png");
-    background-color: #222;
+    background-image: url("../images/contact-bg.jpg");
     background-position: center;
     background-attachment: fixed;
     position: relative;
     padding: 2em 0;
+}
+#contact .overlay-bgColor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0 , 0, .4);
 }
 @media screen and (max-width: 992px) {
     .contact-padded {
