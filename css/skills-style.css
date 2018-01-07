@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+/* reset */
+body,
+html {
+    font-family: sans-serif;       /*无衬线字体*/
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    color: #777;
+    width: 100%;
+}
+h1 {
+    font-size: 72px;
+    font-weight: 700;
+    margin: 0;
+}
+h2 {
+    margin: 0;
+    color: #333;
+    font-size: 20px;
+    font-weight: 400;
+}
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #fcb322;
+    outline: none;
+}
+ul {
+    list-style: none;
+}
+/*.to-animate {*/
+    /*opacity: 0;*/
+/*}*/
+
+/* public */
+.section-title {
+    font-size: 20px;
+    position: relative;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    padding-bottom: 10px;
+}
+.section-title>span {
+    display: block;
+    width: 100%;
+    bottom: 0;
+    height: 3px;
+    position: absolute;
+    background: #fed136;
+}
+.row-padded {
+    padding: 7em 0;
+}
+.text-center {
+    text-align: center;
+}
+.current >a{
+    background-color: #fed136;
+    border-radius: 3px;
+}
+
+/* projects */
+#projects {
+    position: relative;
+}
+#projects .section-title+p {
+    color: #88929a;
+}
+div.project a {
+    margin-bottom: 1.5em;
+    display: block;
+    position: relative;
+}
+/*.visible {*/
+/*opacity: 1!important;*/
+/*color: #fff;*/
+/*}*/
+#projects .overlay-bgColor {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(254, 209, 54, .8);
+    z-index: 8;
+    opacity: 0;
+}
+#projects .overlay-title {
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    width: 100%;
+    margin-top: -15px;
+    z-index: 9;
+    color: #fff;
+    font-size: 20px;
+    opacity: 0;
+}
+#projects .overlay-text {
+    position: absolute;
+    top: 60%;
+    text-align: center;
+    width: 100%;
+    margin-top: -15px;
+    z-index: 9;
+    color: #fff;
+    font-size: 16px;
+    opacity: 0;
+}
+@media screen and (max-width: 480px) {
+    .col-xxs-12 {
+        float: none;
+        display: block;
+        clear: both;
+        width: 100%;
+    }
+}
+.pro-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

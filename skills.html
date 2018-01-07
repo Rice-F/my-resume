@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Projects</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- style.css -->
+    <link href="css/skills-style.css" rel="stylesheet">
+
+    <!--&lt;!&ndash; Animate.css &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="./css/animate.css">-->
+
+    <!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
+    <!--[if lt IE 9]>
+    <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
+    <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
+    <![endif]-->
+
+</head>
+<body>
+    <!-- projects -->
+    <section data-spy="scroll" id="projects">
+        <div class="container">
+            <div class="row row-padded">
+                <div class="col-md-3">
+                    <h2 class="section-title to-animate">
+                        我的项目
+                        <span></span>
+                    </h2>
+                    <p class="to-animate">主要涉及。。。</p>
+                </div>
+                <div class="col-md-8 col-md-push-1">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 project to-animate">
+                            <a href="">
+                                <p class="overlay-title">覆盖文本-项目名称</p>
+                                <p class="overlay-text">覆盖文本-项目技术</p>
+                                <div class="overlay-bgColor"></div>
+                                <img src="images/work_1.jpg" alt="" class="pro-img">
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 project to-animate">
+                            <a href="">
+                                <p class="overlay-title">覆盖文本-项目名称</p>
+                                <p class="overlay-text">覆盖文本-项目技术</p>
+                                <div class="overlay-bgColor"></div>
+                                <img src="images/work_2.jpg" alt=""  class="pro-img">
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 project to-animate">
+                            <a href="">
+                                <p class="overlay-title">覆盖文本-项目名称</p>
+                                <p class="overlay-text">覆盖文本-项目技术</p>
+                                <div class="overlay-bgColor"></div>
+                                <img src="images/work_3.jpg" alt=""  class="pro-img">
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 project to-animate">
+                            <a href="">
+                                <p class="overlay-title">覆盖文本-项目名称</p>
+                                <p class="overlay-text">覆盖文本-项目技术</p>
+                                <div class="overlay-bgColor"></div>
+                                <img src="images/work_4.jpg" alt=""  class="pro-img">
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 project to-animate">
+                            <a href="">
+                                <p class="overlay-title">覆盖文本-项目名称</p>
+                                <p class="overlay-text">覆盖文本-项目技术</p>
+                                <div class="overlay-bgColor"></div>
+                                <img src="images/work_5.jpg" alt=""  class="pro-img">
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 project to-animate">
+                            <a href="">
+                                <p class="overlay-title">覆盖文本-项目名称</p>
+                                <p class="overlay-text">覆盖文本-项目技术</p>
+                                <div class="overlay-bgColor"></div>
+                                <img src="images/work_6.jpg" alt=""  class="pro-img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+        //projectHover
+        var projectHover = function(){
+            $('div.project a').mouseenter(function(){
+                $(this).find('.overlay-bgColor').stop().animate({
+                    opacity: .8
+                }, 400 );
+                $(this).find('p').stop().animate({
+                    opacity: 1
+                }, 400 );
+
+            }).mouseleave(function(){
+                $(this).find('.overlay-bgColor, p').stop().animate({
+                    opacity: 0
+                }, 400 );
+            });
+        }
+
+        //Animate projects
+        var animateProjects = function(){
+            if( $("#projects").length > 0 ){
+                $("#projects .to-animate").each(function(index){
+                    var el = $(this);
+                    setTimeout(function(){
+                        el.addClass("fadeInUp animated");
+                    },index*200,'easeInOutExpo')
+                })
+            }
+        }
+
+        var projectsWayPoint = function() {
+            if ($('#projects').length > 0 ) {
+                $('#projects').waypoint( function( direction ) {
+                    if( direction === 'down' && !$(this).hasClass('animated') ) {
+                        setTimeout( animateProjects , 200);
+                        $(this).addClass('animated');
+                    }
+                } , { offset: '90%' } );
+            }
+        };
+
+        projectHover();
+        animateProjects();
+        projectsWayPoint();
+    </script>
+</body>
+</html>

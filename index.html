@@ -146,17 +146,17 @@
                     <div class="col-md-8 col-md-push-1 to-animate">
                         <h3 class="progress-title">HTML & HTML 5</h3>
                         <div class="progress">
-                            <div class="progress-bar" style="width:85%; background:#cc504c;"></div>
+                            <div class="progress-bar" style="width:85%; background:#FFC0CB;"></div>
                         </div>
 
                         <h3 class="progress-title">JavaScript</h3>
                         <div class="progress">
-                            <div class="progress-bar" style="width:90%; background:	#BA55D3;"></div>
+                            <div class="progress-bar" style="width:90%; background:	#8CD5CB;"></div>
                         </div>
 
                         <h3 class="progress-title">CSS & CSS 3</h3>
                         <div class="progress">
-                            <div class="progress-bar" style="width:80%; background:#5cb85c;"></div>
+                            <div class="progress-bar" style="width:80%; background:#D786AD;"></div>
                         </div>
 
                         <h3 class="progress-title">jQuery</h3>
@@ -166,7 +166,7 @@
 
                         <h3 class="progress-title">Bootstrap</h3>
                         <div class="progress">
-                            <div class="progress-bar" style="width:75%; background:#efac4d;"></div>
+                            <div class="progress-bar" style="width:75%; background:#E1FFFF;"></div>
                         </div>
 
                     </div>
@@ -272,18 +272,18 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group to-animate">
-                                            <input type="text" id="name" class="form-control" placeholder="Name">
+                                            <input type="text" id="name" class="form-control" placeholder="姓名">
                                         </div>
                                         <div class="form-group to-animate">
-                                            <input type="text" id="email" class="form-control" placeholder="Email">
+                                            <input type="text" id="email" class="form-control" placeholder="邮箱">
                                         </div>
                                         <div class="form-group to-animate">
-                                            <input type="text" id="phone" class="form-control" placeholder="Phone">
+                                            <input type="text" id="phone" class="form-control" placeholder="联系方式">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group to-animate">
-                                            <textarea id="message" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
+                                            <textarea id="message" cols="30" rows="5" class="form-control" placeholder="留言"></textarea>
                                         </div>
                                         <div class="form-group to-animate">
                                             <input type="submit" class="btn btn-primary btn-block" value="确认发送">
@@ -352,7 +352,7 @@
                         return;
                     }
                     if ( $phone.val().length == 0 ) {
-                        $Modalprompt.html('电话不能为空');
+                        $Modalprompt.html('联系方式不能为空');
                         $('.bs-example-modal-sm').modal();
                         flag = false;
                         return;
@@ -363,7 +363,7 @@
                         flag = false;
                         return;
                     }
-                    $('input[type="submit"].btn').val("提交中...");
+                    $submit.val("提交中...");
                     $.ajax({
                         url:'http://www.ricefur.cn/resume/contact.php',
                         type:'get',
@@ -376,6 +376,7 @@
                         success:function(rsp){
                             console.log(rsp);
                             $Modalprompt.html( rsp.message );
+                            $submit.val("确认发送");
                             flag = false;
                         },
                         error:function(){
