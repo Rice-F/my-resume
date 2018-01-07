@@ -325,58 +325,61 @@
         <script src="js/main.js"></script>
 
         <script>
-            var $name = $('#name'),
+            $(function(){
+                var $name = $('#name'),
                     $email = $("#email"),
                     $phone = $("#phone"),
                     $message = $("#message"),
                     $submit = $('input[type="submit"].btn'),
                     $Modalprompt = $('.modal-prompt');
-            var flag = false;
-            $submit.on('click',function(evt){
-                evt.preventDefault();
-                if(flag){
-                    return;
-                }
-                flag = true;
-                if ( $name.val().length == 0 ) {
-                    $Modalprompt.html('姓名不能为空');
-                    $('.bs-example-modal-sm').modal();
-                    return;
-                }
-                if ( $email.val().length == 0 ) {
-                    $Modalprompt.html('邮箱不能为空');
-                    $('.bs-example-modal-sm').modal();
-                    return;
-                }
-                if ( $phone.val().length == 0 ) {
-                    $Modalprompt.html('电话不能为空');
-                    $('.bs-example-modal-sm').modal();
-                    return;
-                }
-                if ( $message.val().length == 0 ) {
-                    $Modalprompt.html('留言不能为空');
-                    $('.bs-example-modal-sm').modal();
-                    return;
-                }
-                $('input[type="submit"].btn').val("提交中...");
-                $.ajax({
-                    url:'/contact.php',
-                    type:'get',
-                    data:{
-                        name:  $name.val(),
-                        email: $email.val(),
-                        phone: $phone.val(),
-                        content: $message.val()
-                    },
-                    success:function(rsp){
-                        console.log(rsp);
-                        $Modalprompt.html( rsp.message );
-                    },
-                    error:function(){
-                        console.log("error");
+                var flag = false;
+                $submit.on('click',function(evt){
+                    evt.preventDefault();
+                    if(flag){
+                        return;
                     }
+                    flag = true;
+                    if ( $name.val().length == 0 ) {
+                        $Modalprompt.html('姓名不能为空');
+                        $('.bs-example-modal-sm').modal();
+                        return;
+                    }
+                    if ( $email.val().length == 0 ) {
+                        $Modalprompt.html('邮箱不能为空');
+                        $('.bs-example-modal-sm').modal();
+                        return;
+                    }
+                    if ( $phone.val().length == 0 ) {
+                        $Modalprompt.html('电话不能为空');
+                        $('.bs-example-modal-sm').modal();
+                        return;
+                    }
+                    if ( $message.val().length == 0 ) {
+                        $Modalprompt.html('留言不能为空');
+                        $('.bs-example-modal-sm').modal();
+                        return;
+                    }
+                    $('input[type="submit"].btn').val("提交中...");
+                    $.ajax({
+                        url:'/contact.php',
+                        type:'get',
+                        data:{
+                            name:  $name.val(),
+                            email: $email.val(),
+                            phone: $phone.val(),
+                            content: $message.val()
+                        },
+                        success:function(rsp){
+                            console.log(rsp);
+                            $Modalprompt.html( rsp.message );
+                        },
+                        error:function(){
+                            console.log("error");
+                        }
+                    });
                 });
-            });
+            })
+
         </script>
     </body>
 </html>
