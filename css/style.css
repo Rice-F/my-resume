@@ -133,7 +133,7 @@ ul {
 
 /* Header */
 header {
-    background-image: url("../images/header-bg-1.jpg");
+    background-image: url("../images/header_bg.jpg");
     background-position: center top;
     position: relative;
     z-index: 1;
@@ -422,7 +422,7 @@ header {
 
 /* skills */
 #skills {
-    background-image: url("../images/skills-bg.jpg");
+    background-image: url("../images/skills_bg.jpg");
     background-color: transparent;
     background-size: cover;
     background-attachment: fixed;
@@ -534,7 +534,7 @@ div.project a {
 
 /* contact */
 #contact {
-    background-image: url("../images/contact-bg.jpg");
+    background-image: url("../images/contact_bg.jpg");
     background-position: center;
     background-attachment: fixed;
     position: relative;
