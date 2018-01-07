@@ -342,21 +342,25 @@
                     if ( $name.val().length == 0 ) {
                         $Modalprompt.html('姓名不能为空');
                         $('.bs-example-modal-sm').modal();
+                        flag = false;
                         return;
                     }
                     if ( $email.val().length == 0 ) {
                         $Modalprompt.html('邮箱不能为空');
                         $('.bs-example-modal-sm').modal();
+                        flag = false;
                         return;
                     }
                     if ( $phone.val().length == 0 ) {
                         $Modalprompt.html('电话不能为空');
                         $('.bs-example-modal-sm').modal();
+                        flag = false;
                         return;
                     }
                     if ( $message.val().length == 0 ) {
                         $Modalprompt.html('留言不能为空');
                         $('.bs-example-modal-sm').modal();
+                        flag = false;
                         return;
                     }
                     $('input[type="submit"].btn').val("提交中...");
@@ -372,9 +376,11 @@
                         success:function(rsp){
                             console.log(rsp);
                             $Modalprompt.html( rsp.message );
+                            flag = false;
                         },
                         error:function(){
                             console.log("error");
+                            flag = false;
                         }
                     });
                 });
