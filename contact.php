@@ -2,7 +2,7 @@
 //获取请求者ip
 $ip = $_SERVER['REMOTE_ADDR'];
 //数据库连接
-$dbConnection = new \mysqli('127.0.0.1', 'root', 'root', 'blog', '3306');
+$dbConnection = new \mysqli('localhost', 'root', '', 'blog', '3306');
 $stmt = $dbConnection->prepare('select * from fan_contact_us where ip = ? order by id desc limit 1');
 $stmt->bind_param('s', $ip);
 $stmt->execute();
