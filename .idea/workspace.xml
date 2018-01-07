@@ -2,20 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="784f6640-ba34-4ecb-8396-fea93c23fae4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/contact-bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/head.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/header-bg-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/header-bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/hero-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/hero-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/hero-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/hero.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/map-image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/skills-bg-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/skills-bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wechat.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -41,8 +27,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="372" column="57" lean-forward="false" selection-start-line="372" selection-start-column="57" selection-end-line="372" selection-end-column="57" />
+            <state relative-caret-position="318">
+              <caret line="371" column="41" lean-forward="false" selection-start-line="371" selection-start-column="41" selection-end-line="371" selection-end-column="41" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -339,12 +325,12 @@
       <workItem from="1515232296276" duration="4330000" />
       <workItem from="1515252852803" duration="43000" />
       <workItem from="1515254021665" duration="2579000" />
-      <workItem from="1515304731120" duration="4472000" />
+      <workItem from="1515304731120" duration="5069000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149612000" />
+    <option name="totallyTimeSpent" value="150209000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -769,8 +755,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="372" column="57" lean-forward="false" selection-start-line="372" selection-start-column="57" selection-end-line="372" selection-end-column="57" />
+        <state relative-caret-position="318">
+          <caret line="371" column="41" lean-forward="false" selection-start-line="371" selection-start-column="41" selection-end-line="371" selection-end-column="41" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
