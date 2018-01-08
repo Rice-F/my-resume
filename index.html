@@ -376,11 +376,14 @@
                         success:function(rsp){
                             console.log(rsp);
                             $Modalprompt.html( rsp.message );
+                            $('.bs-example-modal-sm').modal();
                             $submit.val("确认发送");
                             flag = false;
                         },
                         error:function(){
                             console.log("error");
+                            $Modalprompt.html("网络错误，请稍后再试" );
+                            $('.bs-example-modal-sm').modal();
                             flag = false;
                         }
                     });
