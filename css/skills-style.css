@@ -16,7 +16,7 @@ h1 {
 }
 h2 {
     margin: 0;
-    color: #333;
+    color: #fff;
     font-size: 20px;
     font-weight: 400;
 }
@@ -29,9 +29,9 @@ a:focus {
 ul {
     list-style: none;
 }
-/*.to-animate {*/
-    /*opacity: 0;*/
-/*}*/
+.to-animate {
+    opacity: 0;
+}
 
 /* public */
 .section-title {
@@ -64,6 +64,7 @@ ul {
 /* projects */
 #projects {
     position: relative;
+    background-image: url(../images/header_bg.jpg);
 }
 #projects .section-title+p {
     color: #88929a;
