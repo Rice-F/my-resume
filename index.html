@@ -375,12 +375,14 @@
                         },
                         success:function(rsp){
                             console.log(rsp);
+                            rsp = JSON.parse(rsp);
                             $Modalprompt.html( rsp.message );
                             $submit.val("确认发送");
                             flag = false;
                         },
                         error:function(){
                             console.log("error");
+                            $Modalprompt.html("网络错误，请稍后再试" );
                             flag = false;
                         }
                     });
