@@ -375,7 +375,6 @@
                         },
                         success:function(rsp){
                             console.log(rsp);
-                            rsp = JSON.parse(rsp);
                             $Modalprompt.html( rsp.message );
                             $submit.val("确认发送");
                             flag = false;

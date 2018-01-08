@@ -23,13 +23,13 @@ if (empty($result) || $today - strtotime($result['created_at']) > 86400) {
     $isSuccess = $stmt->execute();
     if($isSuccess){
         //成功
-        print_r(['status'=>200,'message'=>'留言成功，谢谢支持！']);
+        echo json_encode(['status'=>200,'message'=>'留言成功，谢谢支持！']);
         return;
     }
     //插入数据库失败
-    print_r(['status'=>201,'message'=>'留言失败，请稍后重试']);
+    echo json_encode(['status'=>201,'message'=>'留言失败，请稍后重试']);
     return;
 }
 $dbConnection->close();
 //一天内重复留言
-print_r(['status'=>202,'message'=>'您于'.$result['created_at'].'留过言，请一天后再试']);
+echo json_encode(['status'=>202,'message'=>'您于'.$result['created_at'].'留过言，请一天后再试']);
