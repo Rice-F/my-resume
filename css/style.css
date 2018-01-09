@@ -62,7 +62,7 @@ ul {
 }
 
 /* Navigation */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767.9px) {
     .navbar-custom {
         padding: 20px 0;
         border-bottom: none;
@@ -113,7 +113,7 @@ ul {
     background-color: #fed136;
     border-radius: 3px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.9px) {
     .navbar-default .navbar-nav>li>a {
         color: #fff;
     }
@@ -147,7 +147,7 @@ header {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-@media (min-width: 768px) {
+@media (min-width: 767.9px) {
     .wrap-intro {
         padding-top: 150px;
         padding-bottom: 150px;
@@ -171,7 +171,7 @@ header {
     margin: 0 auto;
     position: relative;
 }
-@media screen and (max-width: 768px) {          /* 媒体查询圆形动画部分 */
+@media screen and (max-width: 767.9px) {          /* 媒体查询圆形动画部分 */
     .intro-link {
         margin-bottom: 10px;
     }
@@ -209,6 +209,7 @@ header {
     top: 7px;
     background-color: #6DB3D9;
 }
+
 .cycle-link .link-github .icon-github,
 .cycle-link .link-zhihu .icon-zhihu,
 .cycle-link .link-jianshu .icon-jian {
@@ -222,12 +223,12 @@ header {
     font-size: 35px;
 }
 /*.cycle-link .link-zhihu .icon-zhihu {               !* 知乎图标 *!*/
-    /*background: url("../images/icon/weibo.png") no-repeat;*/
-    /*background-size: cover;*/
+/*background: url("../images/icon/weibo.png") no-repeat;*/
+/*background-size: cover;*/
 /*}*/
 /*.cycle-link .link-jianshu .icon-jianshu {             !* 简书图标 *!*/
-    /*background: url("../images/icon/blog.png") no-repeat;*/
-    /*background-size: cover;*/
+/*background: url("../images/icon/blog.png") no-repeat;*/
+/*background-size: cover;*/
 /*}*/
 .cycle-link .link-github .text-github,
 .cycle-link .link-zhihu .text-zhihu,
@@ -244,6 +245,69 @@ header {
 }
 
 .cycle-link .link-github .text-github {           /* github文本*/
+    margin-left: -5px;
+    letter-spacing: inherit;
+}
+
+.intro-link .link-github1,
+.intro-link .link-zhihu1,
+.intro-link .link-jianshu1 {
+    position: absolute;
+    border-radius: 25px;
+    width: 110px;
+    height: 50px;
+    color: #fff;
+}
+.intro-link .link-jianshu1{
+    left:2%;
+    top: 340px;
+    background-color: #6DB3D9;
+}
+.intro-link .link-zhihu1{
+    left: 36%;
+    top: 340px;
+    background-color: #EAC251;
+}
+.intro-link .link-github1{
+    left: 69%;
+    top: 340px;
+    background-color: #42c9a3;
+}
+.intro-link .link-github1 .icon-github,
+.intro-link .link-zhihu1 .icon-zhihu,
+.intro-link .link-jianshu1 .icon-jian {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    font-size: 40px;
+}
+
+.intro-link .link-github1 .icon-github {                        /* gtihub图标 */
+    font-size: 35px;
+}
+/*.cycle-link .link-zhihu .icon-zhihu {               !* 知乎图标 *!*/
+/*background: url("../images/icon/weibo.png") no-repeat;*/
+/*background-size: cover;*/
+/*}*/
+/*.cycle-link .link-jianshu .icon-jianshu {             !* 简书图标 *!*/
+/*background: url("../images/icon/blog.png") no-repeat;*/
+/*background-size: cover;*/
+/*}*/
+.intro-link .link-github1 .text-github,
+.intro-link .link-zhihu1 .text-zhihu,
+.intro-link .link-jianshu1 .text-jianshu {
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -10px;
+    font-size: 16px;
+    text-align: right;
+    letter-spacing: 1px;
+}
+
+.intro-link .link-github1 .text-github {           /* github文本*/
     margin-left: -5px;
     letter-spacing: inherit;
 }
@@ -392,7 +456,7 @@ header {
     letter-spacing: 10px;
     margin: 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.9px) {
     .wrap-intro .intro .intro-name {
         font-size: 42px;
         line-height: 63px;
@@ -404,7 +468,7 @@ header {
     color: #fff;
     line-height: 51px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.9px) {
     .wrap-intro .intro .intro-sub {
         font-size: 21px;
         line-height: 41px;
