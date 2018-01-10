@@ -115,8 +115,7 @@ ul {
 }
 @media screen and (max-width: 767.9px) {
     .navbar-default .navbar-nav>li>a {
-        color: #fff;
-        background-color: #f4d134 !important;
+        color: #0f0b0e;
     }
 
 }
