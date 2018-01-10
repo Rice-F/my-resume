@@ -78,8 +78,8 @@ ul {
     }
 }
 .navbar-default {
-    /*background-color: #020202;*/
-    border-color: #040303 !important;
+    /*background-color: #13131B;*/
+    border-color: transparent;
 }
 
 .navbar-header a {
@@ -109,8 +109,8 @@ ul {
 .navbar-default .navbar-nav>li.active>a,
 .navbar-default .navbar-nav>li.active>a:hover,
 .navbar-default .navbar-nav>li.active>a:focus {
-    color: #f4d134;
-    background-color: #040303 !important;
+    color: #fff;
+    background-color: #fed136;
     border-radius: 3px;
 }
 @media screen and (max-width: 767.9px) {
@@ -118,9 +118,7 @@ ul {
         color: #fff;
         background-color: #f4d134 !important;
     }
-    .navbar-default{
-    background-color: #020202;
-}
+
 }
 .navbar-default .navbar-toggle {
 background-color: #fed136;
@@ -253,40 +251,40 @@ header {
     letter-spacing: inherit;
 }
 
-.intro-link .link-github1,
-.intro-link .link-zhihu1,
-.intro-link .link-jianshu1 {
+.intro-link .mobile-link-github,
+.intro-link .mobile-link-zhihu,
+.intro-link .mobile-link-jianshu {
     position: absolute;
     border-radius: 25px;
     width: 110px;
     height: 50px;
     color: #fff;
 }
-.intro-link .link-jianshu1{
+.intro-link .mobile-link-jianshu{
     left:2%;
     top: 340px;
     background-color: #6DB3D9;
 }
-.intro-link .link-zhihu1{
+.intro-link .mobile-link-zhihu{
     left: 36%;
     top: 340px;
     background-color: #EAC251;
 }
-.intro-link .link-github1{
+.intro-link .mobile-link-github{
     left: 69%;
     top: 340px;
     background-color: #42c9a3;
 }
-.intro-link .link-github1 .icon-github,
-.intro-link .link-zhihu1 .icon-zhihu,
-.intro-link .link-jianshu1 .icon-jian {
+.intro-link .mobile-link-github .icon-github,
+.intro-link .mobile-link-zhihu .icon-zhihu,
+.intro-link .mobile-link-jianshu .icon-jian {
     position: absolute;
     left: 15px;
     top: 0;
     font-size: 40px;
 }
 
-.intro-link .link-github1 .icon-github {                        /* gtihub图标 */
+.intro-link .mobile-link-github .icon-github {                        /* gtihub图标 */
     font-size: 35px;
 }
 /*.cycle-link .link-zhihu .icon-zhihu {               !* 知乎图标 *!*/
@@ -297,9 +295,9 @@ header {
 /*background: url("../images/icon/blog.png") no-repeat;*/
 /*background-size: cover;*/
 /*}*/
-.intro-link .link-github1 .text-github,
-.intro-link .link-zhihu1 .text-zhihu,
-.intro-link .link-jianshu1 .text-jianshu {
+.intro-link .mobile-link-github .text-github,
+.intro-link .mobile-link-zhihu .text-zhihu,
+.intro-link .mobile-link-jianshu .text-jianshu {
     width: 50px;
     position: absolute;
     top: 50%;

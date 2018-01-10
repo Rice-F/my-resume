@@ -257,21 +257,22 @@
     function showLink() {
         var docWidth = document.body.clientWidth;
         if (docWidth >= 768) {
-            $('.intro-link .link-github1, .intro-link .link-zhihu1, .intro-link .link-jianshu1').hide();
+            $('.intro-link .mobile-link-github, .intro-link .mobile-link-zhihu, .intro-link .mobile-link-jianshu').hide();
         }else{
-            $('.intro-link .link-github1, .intro-link .link-zhihu1, .intro-link .link-jianshu1').show();
+            $('.intro-link .mobile-link-github, .intro-link .mobile-link-zhihu, .intro-link .mobile-link-jianshu').show();
         }
     }
-
+    window.onresize = function () {
+        showLink();
+    };
     showLink();
+
     movegit();
     var gitTimer = setInterval(movegit, 7);
     movezhihu();
     var zhiTimer = setInterval(movezhihu, 7);
     moveblog();
     var blogTimer = setInterval(moveblog, 7);
-    window.onresize = function () {
-        showLink();
-    };
+
 
 }())
