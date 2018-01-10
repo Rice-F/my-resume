@@ -115,7 +115,7 @@ ul {
 }
 @media screen and (max-width: 767.9px) {
     .navbar-default .navbar-nav>li>a {
-        color: #0f0b0e;
+        color: #88929a;
     }
 
 }
@@ -542,6 +542,9 @@ header {
 #projects .section-title+p {
     color: #88929a;
 }
+#projects div.mobile-show {
+    display: none;
+}
 div.project a {
     margin-bottom: 1.5em;
     display: block;
@@ -589,6 +592,17 @@ div.project a {
         display: block;
         clear: both;
         width: 100%;
+    }
+    #projects div.mobile-show {
+        display: block;
+    }
+    #projects div.mobile-show>p.mobile-show-title {
+        font-size: 16px;
+        color: #333;
+    }
+    #projects div.mobile-show>p.mobile-show-text {
+        font-size: 14px;
+        color: #88929a;
     }
 }
 .pro-img {
