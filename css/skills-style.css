@@ -64,7 +64,7 @@ ul {
 /* projects */
 #projects {
     position: relative;
-    background-image: url(../images/header_bg.jpg);
+    /*background-image: url(../images/header_bg.jpg);*/
 }
 #projects .section-title+p {
     color: #88929a;
