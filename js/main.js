@@ -1,11 +1,14 @@
 ;(function () {
 
     // Parallax
+    //给window对象添加效果
+    // 结合元素标签中使用data-stellar-background-ratio="0.5"属性，设置滚动速度，表示背景相对正常滚动速度的一半执行
     var parallax = function () {
         $(window).stellar();
     };
 
     //navbarFixed
+    // nav固定在页面顶部
     var navbarFixed = function () {
         $(window).scroll(function () {
             if ($(".navbar").offset().top > 150) {
@@ -26,11 +29,13 @@
     }
 
     //scrollSpy
+    // 监听滚动条，根据滚动条位置自动更新导航栏高亮
     var scrollSpy = function () {
         $('body').scrollspy({target: '#navbar-responsive-collapse'});
     }
 
     //projectHover
+    // 项目模块的hover效果
     var projectHover = function () {
         $('div.project a').mouseenter(function () {
             $(this).find('.overlay-bgColor').stop().animate({
@@ -48,6 +53,7 @@
     }
 
     //Animate pageScroll
+    // 点击导航条对应跳转的动画效果
     var pageScroll = function () {
         $("a.page-scroll").click(function () {
             var $anchor = $(this);
@@ -59,6 +65,7 @@
     }
 
     //Animate header
+    // 遍历所有to-animate元素，依次添加动画效果
     var animateHeader = function () {
         if ($("#knowMe").length > 0) {
             $("#knowMe .to-animate").each(function (index) {
@@ -122,6 +129,7 @@
     }
 
     //WayPoints
+    // 滚动监听，当被监听元素已显示部分占可视窗口高度的90%，添加出场动画
     var headerWayPoint = function () {
         if ($('#knowMe').length > 0) {
             $('#knowMe').waypoint(function (direction) {
